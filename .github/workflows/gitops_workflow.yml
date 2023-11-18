@@ -39,12 +39,11 @@ jobs:
         run: |
           TAG=$((GITHUB_RUN_NUMBER))
           echo "TAG: $TAG"
-          git clone https://github.com/Amith90/kube_manifest.git
+          git clone https://github.com/Amith90/kube_manifest_helloapp.git
           cd kube_manifest
           sed -i "s/build-.*/build-$TAG/g" manifest/deployment.yaml
           git config --global user.email "amithkarunaratne@gmail.com"
           git config --global user.name "Amith90"
-          git remote set-url origin "https://${{secrets.GH_TOKEN}}@github.com/Amith90/kube_manifest.git"
-          git add .
+          git remote set-url origin "https://${{secrets.GH_TOKEN}}@github.com/kube_manifest_helloapp.git
           git commit -m "new build with imgTag build-$TAG"
           git push -q origin main
