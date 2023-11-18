@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Hello App</title>
+    <style>
+      body {
+        transition: background-color 1s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        font-family: monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>emotel test app, V2.1,master</h1>
+    <h1>added new feature2</h1>
+    <h1>ad22</h1>
+  </body>
+  <script>
+    let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+    function updateBodyColor() {
+      let currentColorIndex = Math.floor(Math.random() * colors.length);
+      document.body.style.backgroundColor = colors[currentColorIndex];
+    }
+    window.addEventListener('load', updateBodyColor);
+  </script>
+</html>
