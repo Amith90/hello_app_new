@@ -44,7 +44,7 @@ jobs:
           sed -i "s/build-.*/build-$TAG/g" manifest/deployment.yaml
           git config --global user.email "amithkarunaratne@gmail.com"
           git config --global user.name "Amith90"
-          git remote set-url origin "https://${{secrets.GH_TOKEN}}@github.com/kube_manifest_helloapp.git"
+          git remote set-url origin "https://${{secrets.GH_TOKEN}}@github.com/Amith90/kube_manifest_helloapp.git"
           git add manifest/deployment.yaml
           git commit -m "new build with imgTag build-$TAG"
           git push -q origin main
